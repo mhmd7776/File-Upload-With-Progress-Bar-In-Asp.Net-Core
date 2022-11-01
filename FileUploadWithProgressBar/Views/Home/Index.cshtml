@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "File Upload";
+}
+
+<div class="col-lg-6 col-md-12 mt-3 mx-auto">
+    <div class="card">
+        <div class="card-body">
+            <form method="post" asp-action="UploadFile" asp-controller="Home" enctype="multipart/form-data">
+                <h4 class="text-center">
+                    <span>File Upload With Progress Bar</span>
+                </h4>
+                <hr />
+
+                <label for="FileInput" class="file-input-label">
+                    Please Choose File For Upload
+                </label>
+                <input type="file" id="FileInput" class="d-none" />
+
+                <div class="progress progress-style mt-3 d-none" id="UploadProgressBox">
+                    <div id="UploadProgressBar" class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
